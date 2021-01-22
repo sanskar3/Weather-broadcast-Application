@@ -32,6 +32,9 @@ import com.sanskar.weatherly.models.WeatherResponse
 import com.sanskar.weatherly.network.WeatherService
 import com.sanskar.weatherly.util.Constant
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.tv_main
+import kotlinx.android.synthetic.main.activity_main.tv_name
+import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.*
@@ -178,7 +181,12 @@ class MainActivity : AppCompatActivity() {
                             404 -> {
                                 Log.e("Error 404", "Not Found")
                             }
-                            else -> {Log.e(TAG,"Response Message ${response.message()},Code = ${response.code()}")}
+                            else -> {
+                                Log.e(
+                                    TAG,
+                                    "Response Message ${response.message()},Code = ${response.code()}"
+                                )
+                            }
                         }
                     }
                 }
@@ -261,7 +269,6 @@ class MainActivity : AppCompatActivity() {
     private fun setupUI() {
 
 
-
         val weatherResponseJsonString =
             mSharedPreferences.getString(Constant.WEATHER_RESPONSE_DATA, "")
 
@@ -310,6 +317,7 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
+
     private fun getUnit(value: String): String? {
         var value = "°C"
         if ("US" == value || "LR" == value || "MM" == value) {

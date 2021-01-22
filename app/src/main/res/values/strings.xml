@@ -6,4 +6,10 @@
     <string name="image_contentDescription">image</string>
     <string name="miles_per_hour">miles/hour</string>
     <string name="action_refresh">action_refresh</string>
+    <string name="weatherly">WEATHERLY</string>
+    <string name="weather_mate">The Weather Mate</string>
+    <string name="location">Location</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="xc">xc</string>
+    <string name="xd">Xd</string>
 </resources>
